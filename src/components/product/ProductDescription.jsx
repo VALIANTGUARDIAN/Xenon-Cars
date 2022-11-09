@@ -3,7 +3,7 @@ import products from '../../Products';
 
 const ProductDescription = ({match}) => {
     const productId = match.params.id
-    const product = products.find(product => products.id == productId)
+    const product = products.find(product => product.id == productId)
     return (
         <div>
             <div className="row">
@@ -11,7 +11,7 @@ const ProductDescription = ({match}) => {
                     <div className="card">
                         <h1>{product.name}</h1>
                         <img src={product.image} className="img-fluid m-3 big-img"/>
-                        <p>{products.ProductDescription}</p>
+                        <p>{products.description}</p>
                     </div>
                 </div>
                 <div className="col-md-6">
