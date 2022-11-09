@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/navbar/Navbar';
@@ -12,8 +12,9 @@ function App() {
       <Navbar/>
       <BrowserRouter>
       <Routes>
-        <Route path='/' component={<Home/>} exact/>
-        <Route path='/product/:id' component={<ProductDescription/>} exact/>
+        <Route path='/' element={<Navigate to="/home"/>}/>
+        <Route path='home' element={<Home/>}/>
+        <Route path='product/:id' element={<ProductDescription/>}/>
       </Routes>        
       </BrowserRouter>
       

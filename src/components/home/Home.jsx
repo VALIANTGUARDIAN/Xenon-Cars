@@ -7,8 +7,8 @@ const Home = () => {
     return (
         <div>
             <div className="row justify-content-center">
-                {products.map(products=>{
-                    return <Product product = {products}/>
+                {products.map(product=>{
+                    return <Product product = {product}/>
                 })}
             </div>
         </div>
